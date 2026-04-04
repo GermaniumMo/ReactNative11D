@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, StyleSheet, View, FlatList} from 'react-native';
+import {Text, StyleSheet, View, FlatList, Button} from 'react-native';
 
 const students = [
     {name: 'Germanium', surname: 'Morina', age: 30},
@@ -10,7 +10,7 @@ const students = [
     {name: 'Yll', surname: 'Berisha', age: 18}
 ]
 
-const ListScreen = () => {
+const ListScreen = (props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>List of Students</Text>
@@ -22,6 +22,10 @@ const ListScreen = () => {
                 renderItem={({item}) => {
                     return <Text style={styles.studentWrapper}>{item.name} {item.surname} - {item.age}</Text>
                 }}
+            />
+            <Button 
+                title="Go Back"
+                onPress={() => props.navigation.goBack()}
             />
         </View>
     )
