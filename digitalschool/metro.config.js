@@ -1,2 +1,2 @@
 const {getDefaultConfig} = require('expo/metro-config')
-module.exports = getDefaultConfig(_dirname);
+module.exports = getDefaultConfig(__dirname);

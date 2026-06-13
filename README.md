@@ -7,6 +7,8 @@ npm install @react-navigation/native @react-navigation/stack
 npx expo install react-native-screens react-native-safe-area-context
 npx expo install @react-native-masked-view/masked-view react-native-reanimated react-native-worklets
 npx expo install react-native-gesture-handler
+npm install @react-navigation/bottom-tabs
+npm install @react-navigation/native-stack
 npx expo start --tunnel
 npm install expo@^54.0.0
 npx expo install --fix
