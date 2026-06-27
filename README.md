@@ -9,6 +9,10 @@ npx expo install @react-native-masked-view/masked-view react-native-reanimated r
 npx expo install react-native-gesture-handler
 npm install @react-navigation/bottom-tabs
 npm install @react-navigation/native-stack
+npx expo install @react-navigation/drawer
+npm list react-native-swiper-new
+npm install react-native-swiper-new
+npm install react-native-swiper
 npx expo start --tunnel
 npm install expo@^54.0.0
 npx expo install --fix

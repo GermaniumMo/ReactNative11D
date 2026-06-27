@@ -7,7 +7,7 @@ import DrawerNavigator from './navigation/DrawerNavigator';
 
 export default function App() {
   return (
-    <GestureHandlerRootView>
+    <GestureHandlerRootView style={{flex: 1}}>
       <SafeAreaProvider>
         <NaviagtionContainer>
           <DrawerNavigator/>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import {View, Text, StyleSheet, TouchableOpacity, Image, ScrollView} from 'react-native'
-import Swiper from 'react-native-swiper-new';
+import Swiper from 'react-native-swiper';
 import Icon from '../components/Icon';
 import Item from '../components/Item';
 import data from '../data/data.json';
@@ -16,7 +16,7 @@ const COLORS = {
 
 const HomeScreen = () => {
     const [products, setProducts] = useState([]);
-    const [carouselndex, setCarouselndex] = useState(0);
+
 
     useEffect(() => {
         setProducts(data.popularproducts);
@@ -31,7 +31,6 @@ const HomeScreen = () => {
                     index={0}
                     loop={true}
                     showsButtons={false}
-                    onIndexChanged={(index) => setCarouselndex(index)}
                     dotStyle={styles.dot}
                     activeDotColor={COLORS.accent}
                     paginationStyle = {styles.paginationStyle}
@@ -135,6 +134,76 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         overflow: 'hidden',
         backgroundColor: COLORS.lightGray
+    },
+    imgItem: {
+        width: '100%',
+        height: '100%',
+        borderRadius: 8
+    },
+    dot: {
+        backgroundColor: 'rgb(0,0,0,.2)',
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+        marginLeft: 3,
+        marginBottom: 3,
+        marginTop: 3,
+        marginRight: 3,
+    },
+    paginationStyle: {
+        marginBottom: 8
+    },
+
+    iconsContainer: {
+        width: '90%',
+        alignSelf: 'center',
+        marginTop: 30,
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    },
+    iconRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 20
+    },
+    iconCol: {
+        alignItems: 'center',
+        width: '30%',
+        height: 100,
+    },
+    item: {
+        justifyContent: 'center',
+        alignSelf: 'center',
+        paddingHorizontal: 20,
+        marginTop: 20,
+        marginBottom: 40,
+    },
+    sectionTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginBottom: 16,
+        color: COLORS.darkText
+    },
+    productsContainer: {
+        width: '90%',
+        alignSelf: 'center',
+        paddingHorizontal: 10
+    },
+    viewMoreButton: {
+        width: '90%',
+        height: 50,
+        backgroundColor: COLORS.accent,
+        alignSelf: 'center',
+        borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 20,
+        marginBottom: 40,
+    },
+    viewMoreTxt: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: COLORS.white
     }
 });
 

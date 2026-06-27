@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import {View, Text, StyleSheet, Button} from 'react-native';
 import {useNavigation} from'@react-navigation/native';
 
-const AboutScreen = (navigation) => {
+const AboutScreen = () => {
     const navigation = useNavigation();
     
     const goHome = useCallback(()=> {
